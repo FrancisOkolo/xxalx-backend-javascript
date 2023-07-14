@@ -7,9 +7,9 @@ export default async function asyncUploadUser() {
       user: await createUser(),
     };
   } catch (e) {
-    return {
-      photo: '',
-      user: '',
-    };
+    return Promise.resolve({
+      photo: null,
+      user: null,
+    });
   }
 }
